@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>Document</title>
     <style>
       * {
@@ -41,7 +44,60 @@
         width: 100%;
         height: 100%;
       }
+      .swiper {
+        position: absolute;
+        top: 900px;
+        left: 0;
+        width: 500px;
+        height: 350px;
+        background-color: #0a324c;
+        border: 1px solid pink;
+        z-index: 1;
+        overflow: hidden;
+      }
+      /* 以下是复制的代码 */
+      .swiper-container {
+        width: 500px;
+        height: 300px;
+        margin: 20px auto;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+      }
+      .you {
+        position: absolute;
+        top: 900px;
+        right: 0;
+        width: 500px;
+        height: 350px;
+        background-color: #0a324c;
+        border: 1px solid pink;
+        z-index: 1;
+        overflow: hidden;
+      }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   </head>
   <body>
     <!-- 头部导航区域 -->
@@ -59,5 +115,64 @@
         <img src="./image/logo (1).png" alt="" />
       </div>
     </div>
+
+    <!-- 左侧轮播图部分 -->
+    <div class="swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./image/img-5513180c48468dc2405c3ebd7f51cc82(E1B9B).gif"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/20130908195352(FFE25).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/20130908195357(9EE99).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/20130908195404(EF031).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/20130908195409(21B9F).jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/20130908195415(99EAB).jpg" alt="" />
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- 右侧轮播图部分 -->
+    <div class="you">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./item_1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./item_2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./item_3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./item_4.png" alt="" />
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        pagination: ".swiper-pagination",
+        paginationClickable: true,
+        spaceBetween: 30
+      })
+    </script>
   </body>
 </html>
